@@ -15,11 +15,11 @@ logger.info(" ")
 def item_length(item):
     length = len(item)
     if type(item) == str:
-        logger.info(f"The string {length = }")
+        logger.info(f"The length of the given string is {length}")
     if type(item) == list:
-        logger.info(f"The list {length = }")
+        logger.info(f"The length of the given list is {length}")
     if type(item) == dict:
-        logger.info(f"The dictionary {length = }")
+        logger.info(f"The length of the given dictionary is {length}")
 
 
 """invokes higher order functions for the given type of item"""
