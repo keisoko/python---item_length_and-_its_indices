@@ -1,24 +1,23 @@
-from logzero import logger
 from my_python_modules import operate
 
 """Logs item and its indices with the integer thousand separator""" 
 def item_and_its_indices(item):
     for index, value in enumerate(item):
         if type(value) == int:
-            logger.info(f"index[{index}] = {value:,}")
+            print(f"index[{index}] = {value:,}")
         else:
-            logger.info(f"index[{index}] = {value}")
+            print(f"index[{index}] = {value}")
 
 
 """Logs length of the given item"""
 def item_length(item):
     length = len(item)
     if type(item) == str:
-        logger.info(f"The length of the given string is {length}")
+        print(f"The length of the given string is {length}")
     if type(item) == list:
-        logger.info(f"The length of the given list is {length}")
+        print(f"The length of the given list is {length}")
     if type(item) == dict:
-        logger.info(f"The length of the given dictionary is {length}")
+        print(f"The length of the given dictionary is {length}")
 
 
 """invokes higher order functions for the given type of item"""
