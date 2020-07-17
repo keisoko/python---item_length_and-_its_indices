@@ -3,10 +3,7 @@ from my_python_modules import operate
 """Logs item and its indices with the integer thousand separator""" 
 def item_and_its_indices(item):
     for index, value in enumerate(item):
-        if type(value) == int:
-            print(f"index[{index}] = {value:,}")
-        else:
-            print(f"index[{index}] = {value}")
+        print(f"index[{index}] = {value:,}") if type(value) == int else print(f"index[{index}] = {value}")
 
 
 """Logs length of the given item"""
