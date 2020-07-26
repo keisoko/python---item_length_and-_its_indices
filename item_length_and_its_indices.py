@@ -24,7 +24,7 @@ def item_length(item):
 
 """invokes higher order functions for the given type of item"""
 
-my_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+my_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1_597, 2_584, 4_181, 6_765]
 
 operate(item_and_its_indices, my_list)
 operate(item_length, my_list)
