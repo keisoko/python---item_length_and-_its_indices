@@ -1,9 +1,14 @@
 from my_python_modules import operate
 
-"""Logs item and its indices with the integer thousand separator""" 
+"""Logs item and its indices with the integer thousand separator and decimal two places""" 
 def item_and_its_indices(item):
     for index, value in enumerate(item):
-        print(f"index[{index}] = {value:,}") if type(value) == int else print(f"index[{index}] = {value}")
+        if type(value) == int:
+            print(f"index[{index}] = {value:,}")
+        elif type(value) == float:
+            print(f"index[{index}] = {value:,.2f}")    
+        else:
+            print(f"index[{index}] = {value}")
 
 
 """Logs length of the given item"""
