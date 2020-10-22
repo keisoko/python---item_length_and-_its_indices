@@ -1,18 +1,20 @@
 from my_python_modules import operate
 
 """Logs item and its indices with the integer thousand separator and decimal two places""" 
-def item_and_its_indices(item):
+
+
+def item_and_its_indices(item: any()) -> any:
     for index, value in enumerate(item):
-        if type(value) == int:
+        if type(value) == int or type(value) == float:
             print(f"index[{index}] = {value:,}")
-        elif type(value) == float:
-            print(f"index[{index}] = {value:,.2f}")    
         else:
             print(f"index[{index}] = {value}")
 
 
 """Logs length of the given item"""
-def item_length(item):
+
+
+def item_length(item: any) -> any:
     length = len(item)
     if type(item) == str:
         print(f"The length of the given string is {length}")
@@ -34,3 +36,6 @@ string = "The Master and Margarita"
 
 operate(item_and_its_indices, string)
 operate(item_length, string)
+
+
+
