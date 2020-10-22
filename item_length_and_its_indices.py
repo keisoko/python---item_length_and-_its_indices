@@ -1,9 +1,9 @@
 from my_python_modules import operate
 
-"""Logs item and its indices with the integer thousand separator and decimal two places""" 
+"""Logs item and its indices with the integer and float thousand separator"""
 
 
-def item_and_its_indices(item: any()) -> any:
+def item_and_its_indices(item: any) -> any:
     for index, value in enumerate(item):
         if type(value) == int or type(value) == float:
             print(f"index[{index}] = {value:,}")
