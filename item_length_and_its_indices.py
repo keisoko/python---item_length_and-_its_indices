@@ -17,9 +17,9 @@ def item_and_its_indices(item: any) -> any:
 def item_length(item: any) -> any:
     if type(item) == str:
         print(f"The length of the given string is {len(item)}")
-    if type(item) == list:
+    elif type(item) == list:
         print(f"The length of the given list is {len(item)}")
-    if type(item) == dict:
+    elif type(item) == dict:
         print(f"The length of the given dictionary is {len(item)}")
 
 
