@@ -5,7 +5,7 @@ from my_python_modules import operate
 
 def item_and_its_indices(item):
     for index, value in enumerate(item):
-        if type(value) == int or type(value) == float:
+        if type(value) in [int, float]:
             print(f"index[{index}] = {value:,}")
         else:
             print(f"index[{index}] = {value}")
