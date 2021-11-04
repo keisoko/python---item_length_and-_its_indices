@@ -1,29 +1,26 @@
 from my_python_modules import operate
 
-"""Logs item and its indices with the integer and float thousand separator"""
 
 
 def item_and_its_indices(item):
+    """Logs item and its indices"""
     for index, value in enumerate(item):
-        if type(value) in [int, float]:
-            print(f"index[{index}] = {value:,}")
-        else:
-            print(f"index[{index}] = {value}")
+        print(f"index[{index}] = {value}")
 
 
 """Logs length of the given item"""
 
 
 def item_length(item):
-    if type(item) == str:
+    if isinstance(item, str):
         print(f"The length of the given string is {len(item)}")
-    elif type(item) == list:
+    elif isinstance(item, list):
         print(f"The length of the given list is {len(item)}")
-    elif type(item) == dict:
+    elif isinstance(item, dict):
         print(f"The length of the given dictionary is {len(item)}")
 
 
-"""invokes higher order functions for the given type of item"""
+# Invokes higher order functions for the given type of item"""
 
 my_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
            144, 233, 377, 610, 987, 1_597, 2_584, 4_181, 6_765]
