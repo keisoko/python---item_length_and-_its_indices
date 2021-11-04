@@ -8,10 +8,10 @@ def item_and_its_indices(item):
         print(f"index[{index}] = {value}")
 
 
-"""Logs length of the given item"""
 
 
 def item_length(item):
+    """Logs length of the given item"""
     if isinstance(item, str):
         print(f"The length of the given string is {len(item)}")
     elif isinstance(item, list):
