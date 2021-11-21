@@ -1,24 +1,16 @@
 from my_python_modules import operate
 
 
-
 def item_and_its_indices(item):
     """Logs item and its indices"""
     for index, value in enumerate(item):
         print(f"index[{index}] = {value}")
 
 
-
-
 def item_length(item):
     """Logs length of the given item"""
-    if isinstance(item, str):
-        print(f"The length of the given string is {len(item)}")
-    elif isinstance(item, list):
-        print(f"The length of the given list is {len(item)}")
-    elif isinstance(item, dict):
-        print(f"The length of the given dictionary is {len(item)}")
-
+    if isinstance(item, (str, list, dict)):
+        print(f"The length of the given item is {len(item)}\n")
 
 # Invokes higher order functions for the given type of item"""
 
