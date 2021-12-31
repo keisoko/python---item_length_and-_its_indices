@@ -10,5 +10,4 @@ def flat_list_of_lists_unsorted(my_list):
 
 
 def operate(func, item):
-    result = func(item)
-    return result
+    return func(item)
