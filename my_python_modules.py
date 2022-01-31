@@ -1,12 +1,11 @@
-def flat_list_of_lists_sorted(my_list):
-    my_list = [item for sublist in my_list for item in sublist]
-    my_list.sort()
-    return my_list
+from pipe import traverse
+
+def flat_list_of_lists_sorted(nested_list):
+    return sorted(list(nested_list | traverse))
 
 
 def flat_list_of_lists_unsorted(my_list):
-    my_list = [item for sublist in my_list for item in sublist]
-    return my_list
+    return list(nested_list | traverse)
 
 
 def operate(func, item):
