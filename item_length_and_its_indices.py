@@ -1,15 +1,15 @@
 from my_python_modules import operate
+from typing import Any
 
-
-def item_and_its_indices(item):
+def item_and_its_indices(item: Any) ->  Any:
     """Logs item and its indices"""
     for index, value in enumerate(item):
         print(f"index[{index}] = {value}")
 
 
-def item_length(item):
+def item_length(item: Any) ->  Any:
     """Logs length of the given item"""
-    if isinstance(item, (str, list, dict)):
+    if isinstance(item, str | list | dict): # Check syntax requires python 3.10
         print(f"The length of the given item is {len(item)}\n")
 
 # Invokes higher order functions for the given type of item"""
