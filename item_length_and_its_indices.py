@@ -1,4 +1,6 @@
-from my_python_modules import operate
+"""Outputs the item length and its indices"""
+
+import my_python_modules
 
 
 def item_and_its_indices(item):
@@ -9,19 +11,47 @@ def item_and_its_indices(item):
 
 def item_length(item):
     """Logs length of the given item"""
-    if isinstance(item, str | list | dict): # Check syntax requires python 3.10
+    if isinstance(item, str | list | dict):  # Check syntax requires python 3.10
         print(f"The length of the given item is {len(item)}\n")
 
-# Invokes higher order functions for the given type of item"""
 
-my_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
-           144, 233, 377, 610, 987, 1_597, 2_584, 4_181, 6_765]
+def main():
+    """Main function"""
 
-operate(item_and_its_indices, my_list)
-operate(item_length, my_list)
+    my_list = [
+        0,
+        1,
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        144,
+        233,
+        377,
+        610,
+        987,
+        1_597,
+        2_584,
+        4_181,
+        6_765,
+    ]
+
+    my_python_modules.operate(item_and_its_indices, my_list)
+    print()
+    my_python_modules.operate(item_length, my_list)
+
+    string = "The Master and Margarita"
+
+    my_python_modules.operate(item_and_its_indices, string)
+    print()
+    my_python_modules.operate(item_length, string)
 
 
-string = "The Master and Margarita"
-
-operate(item_and_its_indices, string)
-operate(item_length, string)
+if __name__ == "__main__":
+    main()
