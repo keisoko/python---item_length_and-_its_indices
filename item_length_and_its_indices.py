@@ -11,7 +11,7 @@ def item_and_its_indices(item):
 
 def item_length(item):
     """Logs length of the given item"""
-    if type(item) in [str, list, dict]:
+    if isinstance(item, str | list | dict):
         print(f"The length of the given item is {len(item)}\n")
 
 
