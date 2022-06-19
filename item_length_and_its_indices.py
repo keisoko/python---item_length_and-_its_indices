@@ -1,6 +1,6 @@
 """Outputs the item length and its indices"""
 
-import my_python_modules
+import my_python_modules as mpm
 
 
 def item_and_its_indices(item):
@@ -42,15 +42,15 @@ def main():
         6_765,
     ]
 
-    my_python_modules.operate(item_and_its_indices, my_list)
+    mpm.operate(item_and_its_indices, my_list)
     print()
-    my_python_modules.operate(item_length, my_list)
+    mpm.operate(item_length, my_list)
 
     string = "The Master and Margarita"
 
-    my_python_modules.operate(item_and_its_indices, string)
+    mpm.operate(item_and_its_indices, string)
     print()
-    my_python_modules.operate(item_length, string)
+    mpm.operate(item_length, string)
 
 
 if __name__ == "__main__":
