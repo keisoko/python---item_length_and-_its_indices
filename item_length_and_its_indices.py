@@ -11,8 +11,10 @@ def item_and_its_indices(item):
 
 def item_length(item):
     """Logs length of the given item"""
-    if isinstance(item, str | list | dict):
+    try:
         print(f"The length of the given item is {len(item)}\n")
+    except TypeError as e:
+        print(e)
 
 
 def main():
