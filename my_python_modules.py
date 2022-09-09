@@ -3,10 +3,10 @@
 import random
 import string
 from pprint import pformat
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 
-def operate(func, item):
+def operate(func: Callable[[Any], Any], item: Any) -> Callable[[Any], Any]:
     """Executes the higher-order function"""
     return func(item)
 
