@@ -6,7 +6,10 @@ import my_python_modules as mpm
 def item_and_its_indices(item):
     """Logs item and its indices"""
     for index, value in enumerate(item):
-        print(f"index[{index}] = {value}")
+        if isinstance(value, int | float):
+            print(f"index[{index}] = {value:,}")
+        else:
+            print(f"index[{index}] = {value:}")
 
 
 def item_length(item):
