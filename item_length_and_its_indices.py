@@ -9,7 +9,7 @@ def item_and_its_indices(item):
         if isinstance(value, int | float):
             print(f"index[{index}] = {value:,}")
         else:
-            print(f"index[{index}] = {value:}")
+            print(f"index[{index}] = {value}")
 
 
 def item_length(item):
