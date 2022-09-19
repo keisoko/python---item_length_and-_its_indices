@@ -15,7 +15,7 @@ def item_and_its_indices(item):
 def item_length(item):
     """Logs length of the given item"""
     try:
-        print(f"The length of the given item is {len(item)}\n")
+        print(f"The length of the given {item.__class__.__name__} is {len(item)}\n")
     except TypeError as e:
         print(e)
 
