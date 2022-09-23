@@ -20,7 +20,7 @@ def item_length(item):
         print(e)
 
 
-def main():
+def execute_main():
     """Main function"""
 
     my_list = [
@@ -59,4 +59,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    execute_main()
