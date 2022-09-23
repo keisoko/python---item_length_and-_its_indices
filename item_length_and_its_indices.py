@@ -20,7 +20,7 @@ def item_length(item):
         print(e)
 
 
-def main():
+def main():  # sourcery skip: extract-duplicate-method
     """Main function"""
 
     my_list = [
