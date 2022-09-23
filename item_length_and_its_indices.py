@@ -1,6 +1,6 @@
 """Outputs the item length and its indices"""
 
-import my_python_modules as mpm
+from threading import Thread
 
 
 def item_and_its_indices(item):
@@ -20,7 +20,7 @@ def item_length(item):
         print(e)
 
 
-def main():  # sourcery skip: extract-duplicate-method
+def main():
     """Main function"""
 
     my_list = [
@@ -47,15 +47,15 @@ def main():  # sourcery skip: extract-duplicate-method
         6_765,
     ]
 
-    mpm.operate(item_and_its_indices, my_list)
+    Thread(target=item_and_its_indices(my_list)).start()
     print()
-    mpm.operate(item_length, my_list)
+    Thread(target=item_length(my_list)).start()
 
-    string = "The Master and Margarita"
+    given_string = "The Great Barrier Reef is visible from outer space."
 
-    mpm.operate(item_and_its_indices, string)
+    Thread(target=item_and_its_indices(given_string)).start()
     print()
-    mpm.operate(item_length, string)
+    Thread(target=item_length(given_string)).start()
 
 
 if __name__ == "__main__":
