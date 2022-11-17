@@ -20,6 +20,12 @@ def item_length(item):
         print(e)
 
 
+def combined_execution(function_parameter):
+    Thread(target=item_and_its_indices(function_parameter)).start()
+    print()
+    Thread(target=item_length(function_parameter)).start()
+
+
 def execute_main():
     """Main function"""
 
@@ -47,15 +53,11 @@ def execute_main():
         6_765,
     ]
 
-    Thread(target=item_and_its_indices(my_list)).start()
-    print()
-    Thread(target=item_length(my_list)).start()
+    combined_execution(my_list)
 
     given_string = "The Great Barrier Reef is visible from outer space."
 
-    Thread(target=item_and_its_indices(given_string)).start()
-    print()
-    Thread(target=item_length(given_string)).start()
+    combined_execution(given_string)
 
 
 if __name__ == "__main__":
