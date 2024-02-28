@@ -21,6 +21,7 @@ def item_length(item):
 
 
 def combined_execution(function_parameter):
+    """Combines a functions execution using Thread"""
     Thread(target=item_and_its_indices(function_parameter)).start()
     print()
     Thread(target=item_length(function_parameter)).start()
